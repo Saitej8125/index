@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        background-color: black;
+    }
+    #color{
+        position: absolute;
+        width: 100%;
+        height: 900px;
+        background: linear-gradient(160deg, black 35%,hotpink);
+        opacity: 0.5;
+        z-index: -1;
+    }
+    #container{
+        position: relative;
+        top: 150px;
+        left: 70px;
+        width: 500px;
+        height: 465px;
+        background-color: dimgray;
+        border: 5px solid black;
+        box-shadow: 3px 3px 10px black, 3px 0px  10px black;
+        border-radius: 10px;
+    }
+    #display{
+        position: absolute;
+        top: 40px;
+        left: 42px;
+        width: 83%;
+        height: 55px;
+        font-size: 40px;
+        background-color: pink;
+        border: 2px solid black;
+        box-shadow: 3px 3px 10px black,3px -0px  10px black;
+        border-radius: 3px;
+    }
+    #button{
+        width: 70px;
+        height: 51px;
+        position: relative;
+        top: 75px;
+        left: 45px;
+        color: pink;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: black;
+        border: 2px solid black;
+        box-shadow: 2px 2px 5px black, 2px 0px  5px black;
+        border-radius: 3px;
+    }
+    #button:hover{
+        color: black;
+        background-color: pink;
+    }
+    #calc{
+        position: relative;
+        left: 70px;
+        top: 220px;
+        color: gray;
+        font-size: 200px;
+        z-index: 0;
+    }
+    #ulator{
+        position: absolute;
+        left: 5px;
+        top: 200px;
+        color: white;
+        font-size: 180px;
+        z-index: 0;
+        text-shadow: 3px 3px 10px black;
+        opacity: 1;
+    }
+    #ulators{
+        position: absolute;
+        left: 5px;
+        top: 200px;
+        color: gray;
+        font-size: 180px;
+        opacity: 0.3;
+        z-index: 1;
+    }
+    #ulators{
+        position: absolute;
+        left: 5px;
+        top: 200px;
+        color: white;
+        font-size: 180px;
+        opacity: 0.4;
+        z-index: 2;
+        text-shadow: 3px 3px 10px black;
+    }
+  </style>
+</head>
+<body>
+    <div id="color"></div>
+        <h1 id="calc">Calc</h1>
+        <div id="trans">
+    <div id="container">
+        <form name="calc">
+        <input name="Answer" id="display">
+        <h1 id="ulator">ulator</h1>
+        <h1 id="ulators">ulator</h1>
+        <br><br>
+        <input id="button" type="button" value="1" onclick="calc.Answer.value +='1'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="2" onclick="calc.Answer.value +='2'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="3" onclick="calc.Answer.value +='3'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="+" onclick="calc.Answer.value +='+'">
+        <br><br>
+        <input id="button" type="button" value="4" onclick="calc.Answer.value +='4'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="5" onclick="calc.Answer.value +='5'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="6" onclick="calc.Answer.value +='6'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="-" onclick="calc.Answer.value +='-'">
+        <br><br>
+        <input id="button" type="button" value="7" onclick="calc.Answer.value +='7'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="8" onclick="calc.Answer.value +='8'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="9" onclick="calc.Answer.value +='9'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="*" onclick="calc.Answer.value +=''">
+        <br><br>
+        <input id="button" type="button" value="/" onclick="calc.Answer.value +='/'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="0" onclick="calc.Answer.value +='0'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="." onclick="calc.Answer.value +='.'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="%" onclick="calc.Answer.value +='%'">
+        <br><br>
+        <input id="button" type="button" value="Clear" onclick="calc.Answer.value =' '" style="width: 185px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="=" onclick="calc.Answer.value =eval(calc.Answer.value)" style="width: 185px;">
+        </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
